@@ -1,0 +1,49 @@
+.Card {
+  min-height: 187px;
+  list-style: none;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba($color: #000000, $alpha: 0.2);
+
+  :global .header {
+    display: flex;
+    align-items: center;
+  }
+
+  :global .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+
+  :global .user-info {
+    :global .name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    :global .techs {
+      font-size: 14px;
+      color: #999;
+      margin-top: 3px;
+    }
+  }
+
+  :global .body {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #666;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #8e4dff;
+  }
+}

@@ -1,0 +1,70 @@
+.App {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 'aside main';
+  gap: 20px 50px;
+  padding: 5% 10%;
+
+  aside {
+    animation: top-to-bottom 1s ease-in-out;
+  }
+
+  main {
+    animation: right-to-left 1s ease-in-out;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 1180px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'aside'
+      'aside';
+  }
+
+  @media (max-width: 835px) {
+    padding: 5%;
+
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes top-to-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-50vh);
+    }
+
+    90% {
+      transform: translateY(2vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes right-to-left {
+    0% {
+      opacity: 0;
+      transform: translateX(100vw);
+    }
+
+    80% {
+      transform: translateX(-2vw);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
